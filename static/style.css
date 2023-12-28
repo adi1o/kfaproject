@@ -5,11 +5,6 @@
 html {
     scroll-behavior: smooth;
    }
-   
-   /* #down {
-    margin-top: 3%;
-    padding-bottom: 18%;
-   }  */
 
 * {
     box-sizing: border-box;
@@ -18,6 +13,8 @@ html {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;
   }
+
+  /* ======== navbar section ================ */
 
   nav{
     height:80px;
@@ -55,6 +52,12 @@ html {
   nav a:hover{
     color: black;
   }
+
+   /* ====================================== */
+
+
+   /* ======== home bg-img section ================ */
+
  .banner-cont {
   display: flex;
   width: 100%;
@@ -64,14 +67,18 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
- } .overlay {
+ } 
+ 
+ .overlay {
   display: flex;
   height: 100%;
   width: 100%;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
- } .overlay > div {
+ } 
+ 
+ .overlay > div {
   background-color: rgba(255, 255, 255, 0.8);
   width: 65%;
   padding: 0 15px;
@@ -80,16 +87,22 @@ html {
   justify-content: center;
   align-items: center;
   min-height: 50%;
- } .banner-header {
+ } 
+ 
+ .banner-header {
   font-size: 90px;
   text-transform: uppercase;
- }.banner-desc {
+ }
+ 
+ .banner-desc {
   text-align: center;
   margin: 2em 0;
   font-size: 22px;
   line-height: 35px;
   letter-spacing: 2px;
- }.custom-btn {
+ }
+ 
+ .custom-btn {
   display: block;
   text-align: center;
   color: white;
@@ -98,7 +111,9 @@ html {
   border: 1px solid black;
   text-decoration: none;
   transition: all .4s ease-in-out;
- }.custom-btn:hover {
+ }
+ 
+ .custom-btn:hover {
   background-color: white;
   color: black;
  }
@@ -106,81 +121,122 @@ html {
  .custom-cont {
   padding: 5em 10em;
  }
+
+  /* ====================================== */
+  
+
  /* ======== intro section ================ */
  .intro-cont {
   display: grid;
   grid-template-columns: 1fr 1fr;
- } .intro-heading {
+ }
+ 
+ .intro-heading {
   display: block;
   font-size: 90px;
- } .intro-tag {
+ } 
+ 
+ .intro-tag {
   margin: 1em 0;
   display: block;
   font-weight: 700;
   font-size: 22px;
- } .intro-desc {
+ }
+ 
+ .intro-desc {
   display: block;
   font-weight: 400;
   font-size: 22px;
   line-height: 35px;
- } .intro-cont > div:nth-child(2) {
+ } 
+ 
+ .intro-cont > div:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
- } .intro-cont > div:nth-child(2) > span {
+ }
+ 
+ .intro-cont > div:nth-child(2) > span {
   width: 100%;
- } .img-cont {
+ }
+ 
+ .img-cont {
     background-color: #e8dbd8;
     width: 200px;
     height: 300px;
     position: relative;
- } .img-cont > div {
+ } 
+ 
+ .img-cont > div {
   position: absolute;
   left: -140px;
   top: -15px;
   background-color: #f2f7fa;
- } .iframe-cont {
+ } 
+ 
+ .iframe-cont {
   position: absolute;
   right: -140px;
   top: -15px;
- }iframe {
+ }
+ 
+ iframe {
    width: 90%;
    height: 400px;
  }
+
  /* ====================================== */
 
+
  /* ======== intro section ================ */
+
 .formula-cont {
   background-color: #fbf3ec;
+
 } .formula-cont > .intro-heading {
   text-align: center;
+
 } .formula-cont > .intro-desc {
   margin: 2em 0;
   text-align: center;
 }
+
  /* ====================================== */
+  
+
 
  /* ============ Grid Section ========== */
+
 .shape-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2em;
-} .shape-grid > div {
+} 
+
+.shape-grid > div {
   margin-top: 2em;
   min-height: 300px;
   transition: all .4s ease-in-out;
-} .shape-grid > div:hover { 
+}
+
+.shape-grid > div:hover { 
   transform: scale(1.05);
-} .shape-img {
+} 
+
+.shape-img {
   width: 100%;
   height: 85%;
   overflow: hidden;
-} .shape-img > img {
+} 
+
+.shape-img > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-} .shape-name {
+} 
+
+.shape-name {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,7 +244,11 @@ html {
   color: white;
   min-height: 60px;
 }
+
  /* ====================================== */
+
+
+/* ============ Table Section ========== */
 
   table{
     width: 70%;
@@ -222,8 +282,10 @@ html {
     word-wrap: break-word;
     padding: 1rem 2rem;
   }
+/* ====================================== */
 
 
+  /* ============ Calculator Section ========== */
 .calculator {
     background-color: white;
     padding: 20px;
@@ -321,10 +383,6 @@ h2{
 
 #rectangle{
   width: 100%;
-}
-
-.ani{
-  margin-bottom: 5em;
 }
 
 .cont_image{
