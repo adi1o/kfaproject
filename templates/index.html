@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<!-- navigation -->
+  <nav>
+    <div class="logo">Cal.</div>
+    <div class="nav-items">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#video">Video</a>
+      <a href="#workout">Work out</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="column-left" id="home">
+        <h1>Calculations</h1>
+        <p>
+          Experience seamless calculations at your fingertips on our webpage.<br>
+          For more information or any inquiries, feel free to contact us!
+        </p>
+        <a href="/contactus"> <button>Contact Us</button></a>
+      </div>
+      <div class="column-right">
+        <img src="/static/Img/pngwing.com.png" alt="illustration" class="hero-image" />
+      </div>
+    </div>
+  </section>
+<!-- intro -->
+  <div class="intro cont">
+    <h1 id="about">Area</h1>
+    <p><span class="agadi">T</span><span class="arko">he</span> <span class="ani"> for a 2-dimensional shape is the space enclosed within the perimeter of the given shape.</span><br> To
+      calculate the area for different shapes, use different formulas based on the number of sides and other
+      characteristics such as angles between the sides.<br>
+      <img src="/static/Img/Squaring_the_circle.svg" alt="illustration" class="cont-image" />
+      <br>There are several well-known formulas for the areas of simple shapes such as triangles, rectangles, and circles. Using these formulas, the area of any polygon can be found by dividing the polygon into triangles. For shapes with curved boundary, calculus is usually required to compute the area.</p>
+  </div> 
+  <div class="cont">
+     <h1>Formula</h1>
+     <p>An approach to defining what is meant by "area" is through axioms. "Area" can be defined as a function from a collection M of a special kinds of plane figures (termed measurable sets) to the set of real numbers. the formula of a few shapes are mentioned in the given table.</p>
+  </div>
+  <!-- Table -->
+  <table>
+    <tr>
+      <th>S.N.</th>
+      <th>shapes</th>
+      <th>formula</th>
+      <th> no.of sides </th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Rectangle</td>
+      <td> l x b</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Circle</td>
+      <td>πr^2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Triangle</td>
+      <td>1/2(b xh)</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Square</td>
+      <td>a^2</td>
+      <td>4</td>
+    </tr>
+  </table> 
+
+  <div class="cont">
+  <h1>Calculating Area for Different Shapes</h1>
+  <p><h4></h4></p>
+  </div>
+
+  <!-- youtube -->
+  <div class="YouTube" id="video">
+    <h1>Video</h1>
+    <iframe src="https://www.youtube.com/embed/rYzEh73OIIs?si=M3liMzdWk6Zh6fmO" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+
+    </iframe>
+  </div>
+
+  </div>
+
+        <div class="calculator-font">
+          <h1>Area Calculator</h1>
+        <form action="/calculate" method="post" class="calculator">
+          
+            <select name="cal" id="cal">
+              <option value="rectangle">Rectangle</option>
+              <option value="square">Square</option>
+              <option value="circle">Circle</option>
+              <option value="triangle">Triangle</option>
+            </select>
+            <!-- rectangle  -->
+            <section id="rectangle">
+
+          <input type="number" id="length" name="length" min="0" placeholder="length"><br>
+
+          <input type="number" id="width" name="width" min="0" placeholder="width"><br>
+          
+            </section>
+             
+            <!-- square  -->
+            <section id="square">
+          <input type="number" id="lenhq" name="lenhq" min="0" placeholder="length"><br>
+
+        </section>
+
+           <!-- circle -->
+           <section id="circle">
+          <input type="number" id="radius" name="radius" min="0" placeholder="radius"><br>
+
+        </section>
+           <!-- triangle -->
+           <section id="triangle">
+          <input type="number" id="base" name="base" min="0" placeholder="base"><br>
+          <input type="number" id="height" name="height" min="0" placeholder="height"><br>
+
+        </section>
+        {% if messages and messages.area %}
+          <h2>Area of {{messages.opt}}: {{ messages.area }}</h2>
+          {% endif %}
+        <button type="submit">Calculate Area</button>
+        </form>
+      </div>
+        <script>
+          let cal=document.getElementById('cal')
+          cal.addEventListener('change',()=>{
+            console.log(cal.value)
+            document.getElementById('rectangle').style.display='none'
+            document.getElementById('square').style.display='none'
+            document.getElementById('circle').style.display='none'
+            document.getElementById('triangle').style.display='none'
+            document.getElementById(cal.value).style.display='block'
+          })
+        </script>
+        
+</body>
+</html>
