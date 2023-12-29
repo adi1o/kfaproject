@@ -118,18 +118,10 @@ html {
   color: black;
  }
 
- .custom-cont {
-  padding: 5em 10em;
- }
-
   /* ====================================== */
   
 
  /* ======== intro section ================ */
- .intro-cont {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
- }
  
  .intro-heading {
   display: block;
@@ -174,6 +166,20 @@ html {
   top: -15px;
   background-color: #f2f7fa;
  } 
+
+  /* ====================================== */
+
+
+   /* ======== video section ================ */
+
+  .intro-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   }
+
+  .custom-cont {
+    padding: 5em 10em;
+   }
  
  .iframe-cont {
   position: absolute;
@@ -189,7 +195,7 @@ html {
  /* ====================================== */
 
 
- /* ======== intro section ================ */
+ /* ======== formula section ================ */
 
 .formula-cont {
   background-color: #fbf3ec;
